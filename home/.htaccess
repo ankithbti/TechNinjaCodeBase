@@ -1,0 +1,17 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^techninja.fitied.com/home$
+RewriteRule ^(.*)$ http://www.techninja.fitied.com/home [R=301]
+
+#DirectoryIndex start1.php
+#DirectoryIndex startup.php
+DirectoryIndex index.php
+# disable directory browsing
+# For security reasons, Option all cannot be overridden.
+#Options All -Indexes
+Options ExecCGI Includes IncludesNOEXEC SymLinksIfOwnerMatch -Indexes
+# Directives for custom error pages
+#ErrorDocument 400 http://www.fitied.com/error400.php
+ErrorDocument 403 http://www.fitied.com/404/
+ErrorDocument 404 http://www.fitied.com/404/
+#ErrorDocument 500 http://www.fitied.com/error500.phpAddType application/x-java-jnlp-file jnlp
+AddType application/x-java-jnlp-file jnlp
